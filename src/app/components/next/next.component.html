@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-1 mx-auto" *ngFor="let day of predictions">
+        <div class="row">{{day.date | date:'EEE'}}</div>
+        <div class="row">
+            <img [src]="day.condition.icon" alt="prediction">
+        </div>
+        <div class="row">{{day.maxtempc}} {{day.mintempc}}</div>
+    </div>
+</div>

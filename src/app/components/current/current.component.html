@@ -1,0 +1,17 @@
+<div class="col-md-8 mx-auto bottom">
+    <div class="col-md-4 font fontf">{{currentCity.name}}</div>
+    <div class="col-md-4 fontf">{{currentCity.localtime | date:'EEEE, h:mm'}}</div>
+    <div class="col-md-4 fontf">{{currentCity.condition.text}}</div>
+    
+    <div class="row" style="padding: 20px;">
+        <div class="col-md-4 mx-auto fontf">
+            <img [src]="currentCity.condition.icon" alt="current">
+            <span><h1>{{currentCity.tempc}} ˚C</h1></span> 
+        </div>
+        <div class="col-md-4 mx-auto">
+            <div class="row fontf">Precipitation: {{currentCity.precipin}} %</div>
+            <div class="row fontf">Humidity: {{currentCity.humidity}} %</div>
+            <div class="row fontf">Wind: {{currentCity.windmph}} m/h</div>
+        </div>
+    </div>
+</div>
